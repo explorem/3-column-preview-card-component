@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body,
+main {
+    display: flex;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+
+main {
+    flex-basis: 300px;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+main>article:nth-child(1) {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 10px 0 0;
+}
+
+main>article:nth-child(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+
+main>article:nth-child(3) {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0 10px 10px;
+}
+
+article {
+    padding: 35px;
+    overflow: hidden;
+}
+
+img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 55px;
+    animation: car 1s linear 1;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 90px;
+    color: hsl(0, 0%, 95%);
+}
+
+h2+p {
+    font-size: 1.5rem;
+    line-height: 170%;
+}
+
+h2+p,
+a {
+    font-weight: 400;
+}
+
+a {
+    display: block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: hsl(0, 0%, 95%);
+    font-size: 1.5rem;
+}
+
+a:active {
+    transform: translateY(5px);
+}
+
+article:nth-of-type(1) a {
+    color: hsl(31, 77%, 52%);
+}
+
+article:nth-of-type(2) a {
+    color: hsl(184, 100%, 22%);
+}
+
+article:nth-of-type(3) a {
+    color: hsl(179, 100%, 13%);
+}
+
+@media (min-width: 1024px) {
+    main {
+        flex-basis: 960px;
+        flex-direction: row;
+        margin: 0;
+    }
+
+    main>article:nth-child(1) {
+        border-radius: 10px 0 0 10px;
+    }
+
+    main>article:nth-child(3) {
+        border-radius: 0 10px 10px 0;
+    }
+
+    article {
+        padding: 56px;
+    }
+
+    img {
+        width: 70px;
+    }
+
+    h2 {
+        font-size: 4rem;
+        line-height: 120px;
+    }
+
+    a {
+        margin-top: 90px;
+        border: 2px solid transparent;
+        transition: .3s;
+    }
+
+    p+a:hover {
+        background-color: transparent;
+        border: 2px solid hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 95%);
+    }
+}
+
+@keyframes car {
+    0% {
+        left: -70%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
